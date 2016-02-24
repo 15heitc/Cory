@@ -1,0 +1,53 @@
+body
+{
+
+    background-color:
+            #e3fe3f;
+}
+#straightalk{
+    position:absolute;
+    top: 25px;
+    left: 775px;
+
+}
+#toptext{
+    background-color: #e3fe3f;
+position:absolute;
+    top: 95px;
+    left: 195px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+
+    font-family: Calibri;
+}
+img{
+    background-color: #e3fe3f;
+    position:absolute;
+    top:450px;
+    left: 300px;
+}
+#walmart{
+    background-color: #e3fe3f;
+    position: absolute;
+top: 877px;
+left:800px ;
+}
+#line4{
+    font-size: 30px;
+}
+span{
+    font-weight: bold;
+}
+#bottom{
+    font-size: 20px;
+}
+p{
+    padding-right: 55px;
+
+    position:absolute;
+    bottom: -11px;
+    background-color:
+    white;
+    font-size:12px;
+}
