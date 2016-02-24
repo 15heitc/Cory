@@ -1,0 +1,63 @@
+body
+{
+    font-size: 80%;                         /* Default font and size for page */
+    font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+}
+ul#tabs
+{
+    list-style-type: none;                  /* No bullets                     */
+    margin: 300px 0 0 0;                    /* Positive top margin            */
+    padding: 0 0 0.3em 0;                   /* Bottom padding on tabs to make */
+                                            /* them adjacent to the content   */
+}
+ul#tabs li
+{
+    display: inline;                        /* Text in same line              */
+    padding: 12px;                          /* Padding to make it readable    */
+}
+
+
+ul#tabs li a
+{
+    color: #42454a;                         /* sets text color to */
+    background-color: #dedbde;              /* Sets background to */
+    border: 1px solid #c9c3ba;              /* sets border color to light-grey */
+    border-bottom: none;                    /* no bottom border   */
+    border-top-left-radius: 7px;            /* top left corner is rounded and 7 pixels wide  */
+    border-top-right-radius: 7px;           /* top right corner is rounded and 7 pixels wide */
+    padding: 0.3em 2em 0.3em 2em;           /* slightly thicker padding on top and*/
+                                            /* bottom than on the sides */
+    text-decoration: none;                  /* plain font */
+
+
+}
+
+
+ul#tabs li a:hover
+{
+    background-color: #f1f0ee;              /* sets color to grey-white */
+}
+
+
+ul#tabs li a.selected
+{
+    color: #000;                            /* sets font color to black */
+    background-color: #f1f0ee;              /* sets background color to grey-white*/
+    font-weight: bold;                      /* sets font to bold */
+    padding: 0.7em 0.3em 0.38em 0.3em;      /* thickest padding on top and */
+                                            /* rest have the same smaller width */
+}
+
+
+div.tabContent
+{
+    border: 1px solid #c9c3ba;              /* sets border color to light-grey     */
+    padding: 0.5em;                         /* padding is half element all aroud   */
+    background-color: #f1f0ee;              /* sets background color to grey-white */
+}
+
+
+div.tabContent.hide
+{
+    display: none;                          /*hides display */
+}
