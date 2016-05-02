@@ -4,9 +4,8 @@ function onLoad()
     //$(".newValue").hide();
 }
 
-function ajaxInsertGarden(method, ParentID, Name,Position, Years, Number)
+function ajaxInsertGarden(method, Name,Position, Years, Number)
 {
-    alert("ajax insert GArden")
     return $.ajax({
         url: 'ShadyAPI.php',
         type: 'POST',
@@ -23,7 +22,6 @@ function ajaxInsertGarden(method, ParentID, Name,Position, Years, Number)
 
 function insertGarden()
 {
-    alert("insertGarden")
     var id, Name, Position, Years, Number;
     id = JSON.stringify($('#Parent option:selected').val());
     Name = JSON.stringify($('#Name').val());
@@ -36,12 +34,11 @@ function insertGarden()
     ajax.fail(function () {
         alert("Failure");
     });
-  //  getGardens();
+    //  getGardens();
 }
 
 function insertGardenCallback(response_in)
 {
-    alert("insertGardenCallback")
     response = JSON.parse(response_in);
     if (!response['success'])
     {
@@ -59,7 +56,6 @@ function insertGardenCallback(response_in)
 
 function showGardens(gardens)
 {
-    alert("showGardens")
     var gardenList = "";
 
     $.each(gardens, function (key, value)
@@ -77,7 +73,6 @@ function showGardens(gardens)
 
 function getGardens()
 {
-    alert("getGardens")
     ajax = ajaxgetGardens("getGardens");
     ajax.done(getGardensCallback);
     ajax.fail(function () {
@@ -87,7 +82,6 @@ function getGardens()
 
 function ajaxgetGardens(method)
 {
-alert("ajaxGetGardens")
     return $.ajax({
         url: 'ShadyAPI.php',
         type: 'POST',
@@ -98,7 +92,6 @@ alert("ajaxGetGardens")
 
 function getGardensCallback(response_in)
 {
-    alert("getGardensCallback")
     response = JSON.parse(response_in);
     $gardens = response["gardens"];
     if (!response['success'])
@@ -158,7 +151,7 @@ function updateGarden()
 
 function ajaxupdateGarden(method)
 {
-alert("ajaxupdateGarden")
+    alert("ajaxupdateGarden")
     return $.ajax({
         url: 'ShadyAPI.php',
         type: 'POST',

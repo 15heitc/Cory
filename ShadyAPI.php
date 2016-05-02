@@ -6,7 +6,7 @@ function sanitize($str, $quotes = ENT_NOQUOTES) {
     return $str;
 }
 function getDatabases() {
-   // retrieve and sanitize posted values.
+    // retrieve and sanitize posted values.
     if (isset($_POST['server'])) {
         $server = json_decode(sanitize($_POST['server']));
     }
@@ -53,15 +53,15 @@ function insertGarden() {
     if ($dbConn->connect_error) {
         die("Connection failed: " . $dbConn->connect_error);
     }
-    $query = "INSERT INTO bengals_offense (  Name, Position , Years, Number ) " .
+    $query = "INSERT INTO Bengals_Offense (  Name, Position , Years, Number ) " .
         "VALUES ( " .
-        "". $Name . ", " .
-        "" . $Position . ", " .
-        "" . $Years . ", " .
-        "" . $Number . "; ";
+        "'". $Name . "', " .
+        "'" . $Position . "', " .
+        "'" . $Years . "', " .
+        "'" . $Number . "'); ";
     $result = $dbConn->query($query);
     $return = new stdClass;
-    $return->querystring = (string)$query;
+    $return->querystring = $query;
     if ($result) {
         //$return->connection = $dbConn;
         // $return->credentials = (string) (demoUsername() . demoPassword() . demoDB() . " on " . demoServer());
